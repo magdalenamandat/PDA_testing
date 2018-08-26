@@ -44,7 +44,7 @@ it('should concatenate multiple number on button click', function () {
 
 it('should clear the running total', function () {
   calculator.numberClick(1);
-  calculator.numberClick(1);
+  calculator.numberClick(2);
   calculator.numberClick(2);
   calculator.clearClick()
   assert.strictEqual(calculator.runningTotal, 0);

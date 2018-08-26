@@ -97,17 +97,14 @@ it('should work to update the display with the result of the operation *', funct
         expect(running_total.getAttribute('value')).to.eventually.equal('3086.25');
       });
 
-it('should work as expected for a range of numbers - negative', function () {
-  running_total = element(by.css('#running_total'));
-  element(by.css('#number9')).click();
-  element(by.css('#operator_subtract')).click();
-  element(by.css('#number3')).click();
-  element(by.css('#number0')).click();
-  element(by.css('#operator_equals')).click();
-  expect(running_total.getAttribute('value')).to.eventually.equal('-21');
-});
-
-
-
+      it('should work as expected for a range of numbers - negative', function () {
+        running_total = element(by.css('#running_total'));
+        element(by.css('#number9')).click();
+        element(by.css('#operator_subtract')).click();
+        element(by.css('#number3')).click();
+        element(by.css('#number0')).click();
+        element(by.css('#operator_equals')).click();
+        expect(running_total.getAttribute('value')).to.eventually.equal('-21');
+      });
 
 });
